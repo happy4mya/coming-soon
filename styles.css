@@ -1,0 +1,300 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+/*hero section*/
+
+.hero {
+    background: url(images/earth.png);
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    animation: zoomIn 10s infinite ease-in-out; /* Apply animation */
+    
+    
+}
+
+/*background animation*/
+
+@keyframes zoomIn {
+    0% {
+        background-size: 100%; /* Initial size */
+    }
+    50% {
+        background-size: 110%; /* Slightly zoomed */
+    }
+    100% {
+        background-size: 100%; /* Back to original size */
+    }
+}
+
+.logo a {
+    font-family: "Wallpoet", sans-serif;
+    font-size: 8em;
+    text-decoration: none;
+    color: #c7c7c7;
+   
+}
+
+.hero-content {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    text-transform: uppercase;
+    gap: 2em;/* Adds spacing between child elements */
+    
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    line-height: 1.5em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+
+}
+
+.hero-content h2 {
+    font-weight: 300;
+    font-size: 16px;
+    word-spacing: 2px;
+}
+
+
+.yellow {
+    color: rgb(139, 139, 139);
+}
+
+.button {
+    margin-top: 2em;
+    padding: 14px 16px;
+    color: #fff;
+    border: 3px solid #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    animation: bounce 3s infinite ease-in-out; 
+
+}
+
+.button:hover {
+    color:  rgb(176, 176, 176);
+    box-shadow: 0 0 6px 1px rgba(251, 251, 251, 0.7);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Initial position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px */
+    }
+}
+
+
+
+
+/*contact info*/
+
+#contact {
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Full viewport height */
+    padding: 2rem; /* Add spacing inside the section */
+    text-align: center; /* Center the text content */
+    
+} 
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Adds spacing between form fields */
+    width: 100%;
+    max-width: 400px; /* Limits the form width */
+   
+}
+
+#contact h2 {
+    font-size: 3em;
+    padding: 16px;
+}
+
+#contact p {
+    font-size: 16px;
+    font-weight: 200;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    font-weight: 100; /* Makes labels stand out */
+    align-self: flex-start; /* Aligns labels to the left */
+   
+}
+
+.contact-form input,
+.contact-form textarea {
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(184, 184, 184); /* Default border color */
+    font-size: 1rem;
+}
+
+
+/* Add glowing effect on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: rgba(35, 35, 35, 0.5) ;
+    border-color: #bebebe; /* Border color for focus */
+    box-shadow: 0 0 8px 1px rgba(251, 251, 251, 0.7); /* Glow effect */
+    outline: none; /* Removes default browser outline */
+}
+
+.contact-form button {
+    margin-top: 20px;
+    width: 25%;
+    padding: 8px;
+    background-color: #fffefe;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.contact-form button:hover {
+    background-color: #000; /* Slightly darker button on hover */
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: rgb(246, 186, 66);
+}
+
+/* media queries */
+
+/* Tablet Screens (768px and below) */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    .logo a {
+        font-size: 5em;
+    }
+
+    .hero-content {
+        padding: 40px 0;
+        gap: 1.5em;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content h2 {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .contact-form {
+        max-width: 300px;
+    }
+
+    #contact h2 {
+        font-size: 2.5em;
+    }
+
+    .contact-form button {
+        width: 50%;
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 3em;
+    }
+
+    .hero-content {
+        padding: 20px 0;
+        gap: 1em;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .contact-form {
+        max-width: 250px;
+    }
+
+    #contact h2 {
+        font-size: 2em;
+    }
+
+    .contact-form button {
+        width: 60%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
